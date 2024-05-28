@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/CharacterMouvement.gd" id="1_ymnk3"]
 [ext_resource type="Texture2D" uid="uid://bxwvygi4hff1l" path="res://icon.svg" id="2_e4w71"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jkilg"]
-radius = 67.5167
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmoxa"]
+size = Vector2(128, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ymnk3")
@@ -13,5 +13,5 @@ script = ExtResource("1_ymnk3")
 texture = ExtResource("2_e4w71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 3.5)
-shape = SubResource("CircleShape2D_jkilg")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_kmoxa")
