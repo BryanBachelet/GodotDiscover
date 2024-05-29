@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c0565n11v7cnb" path="res://Assets/Green.png" id="1_3hunv"]
 [ext_resource type="Texture2D" uid="uid://ynqd4qpj5hag" path="res://Assets/Terrain (16x16).png" id="2_lcxnw"]
 [ext_resource type="PackedScene" uid="uid://b53iwxynj1ide" path="res://Scenes/mainCharacter.tscn" id="3_673y6"]
-[ext_resource type="Script" path="res://Scenes/FadeStart.gd" id="4_2h21d"]
+[ext_resource type="PackedScene" uid="uid://cgoquplnqdltm" path="res://fade_rectangle.tscn" id="4_55v4y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ey10j"]
 texture = ExtResource("2_lcxnw")
@@ -629,9 +629,9 @@ position = Vector2(33, 447)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(265, -111)
 
-[node name="FadeRectangle" type="ColorRect" parent="."]
-visible = false
-offset_right = 1155.0
-offset_bottom = 651.0
-color = Color(0, 0, 0, 1)
-script = ExtResource("4_2h21d")
+[node name="FadeRectangle" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_55v4y")]
+visible = true
+offset_left = -578.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 329.0

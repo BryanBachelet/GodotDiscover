@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgoquplnqdltm"]
+
+[ext_resource type="Script" path="res://Scenes/FadeStart.gd" id="1_gxu27"]
+
+[node name="FadeRectangle" type="ColorRect"]
+visible = false
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_gxu27")
