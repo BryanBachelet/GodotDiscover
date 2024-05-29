@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const MIN_SPEED = 300.0
+var currentSpeed = MIN_SPEED
+const MAX_SPEED = 600.0
 const JUMP_VELOCITY = -500
 @onready var sprite_2d = $Sprite2D
 
@@ -27,12 +29,15 @@ func _physics_process(delta):
 	var direction = Input.get_axis("Move_Left", "Move_Right")
 	
 	if direction :
-		velocity.x = direction * SPEED
+		velocity.x = direction * currentSpeed
+		currentSpeed += MAX_SPEED*2*delta
+		currentSpeed = clamp(currentSpeed,MIN_SPEED,MAX_SPEED)
 	else:
-		velocity.x = move_toward(velocity.x, 0, 12)
+		velocity.x = move_toward(velocity.x, 0, 10)
+		currentSpeed = MIN_SPEED
 
 	move_and_slide()
-	
+
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
 	
