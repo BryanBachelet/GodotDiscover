@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgrj05gruwnd5"]
+[gd_scene load_steps=7 format=3 uid="uid://dgrj05gruwnd5"]
 
 [ext_resource type="Texture2D" uid="uid://c0565n11v7cnb" path="res://Assets/Green.png" id="1_3hunv"]
 [ext_resource type="Texture2D" uid="uid://ynqd4qpj5hag" path="res://Assets/Terrain (16x16).png" id="2_lcxnw"]
 [ext_resource type="PackedScene" uid="uid://b53iwxynj1ide" path="res://Scenes/mainCharacter.tscn" id="3_673y6"]
+[ext_resource type="PackedScene" uid="uid://crfo5xeaxpa4j" path="res://Prefab/pickup_gun.tscn" id="4_umkd4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ey10j"]
 texture = ExtResource("2_lcxnw")
@@ -609,3 +610,7 @@ layer_0/tile_data = PackedInt32Array(1835008, 458753, 0, 1835009, 458753, 0, 183
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_673y6")]
 position = Vector2(33, 447)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="PickupGun" parent="." instance=ExtResource("4_umkd4")]
