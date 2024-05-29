@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://crfo5xeaxpa4j"]
+[gd_scene load_steps=5 format=3 uid="uid://crfo5xeaxpa4j"]
 
 [ext_resource type="Script" path="res://Scripts/GunPickup.gd" id="1_8ql6r"]
+[ext_resource type="PackedScene" uid="uid://bt82hny1tr6hr" path="res://Prefab/gun.tscn" id="2_tf53p"]
 [ext_resource type="Texture2D" uid="uid://bmiyjxg6y6834" path="res://Assets/GUN_01_[square_frame]_01_V1.00.png" id="2_wrjnr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wufsw"]
 size = Vector2(63, 47)
 
-[node name="PickupGun" type="StaticBody2D"]
+[node name="PickupGun" type="StaticBody2D" groups=["Gun"]]
 script = ExtResource("1_8ql6r")
+gunInst = ExtResource("2_tf53p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wrjnr")
