@@ -6,7 +6,7 @@ var currentSpeed = MIN_SPEED
 const MAX_SPEED = 600.0
 const JUMP_VELOCITY = -500
 @onready var sprite_2d = $Sprite2D
-
+@onready var color_rec = $Camera2D/FadeRectangle
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -37,6 +37,7 @@ func _physics_process(delta):
 		currentSpeed = MIN_SPEED
 
 	move_and_slide()
+
 
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
