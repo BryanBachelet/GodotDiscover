@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgrj05gruwnd5"]
+[gd_scene load_steps=8 format=3 uid="uid://dgrj05gruwnd5"]
 
 [ext_resource type="Texture2D" uid="uid://c0565n11v7cnb" path="res://Assets/Green.png" id="1_3hunv"]
 [ext_resource type="Texture2D" uid="uid://ynqd4qpj5hag" path="res://Assets/Terrain (16x16).png" id="2_lcxnw"]
 [ext_resource type="PackedScene" uid="uid://b53iwxynj1ide" path="res://Scenes/mainCharacter.tscn" id="3_673y6"]
 [ext_resource type="PackedScene" uid="uid://cgoquplnqdltm" path="res://fade_rectangle.tscn" id="4_55v4y"]
+[ext_resource type="PackedScene" uid="uid://crfo5xeaxpa4j" path="res://Prefab/pickup_gun.tscn" id="6_l03as"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ey10j"]
 texture = ExtResource("2_lcxnw")
@@ -630,8 +631,10 @@ position = Vector2(33, 447)
 position = Vector2(265, -111)
 
 [node name="FadeRectangle" parent="CharacterBody2D/Camera2D" instance=ExtResource("4_55v4y")]
-visible = true
 offset_left = -578.0
 offset_top = -322.0
 offset_right = 577.0
 offset_bottom = 329.0
+
+[node name="PickupGun" parent="." instance=ExtResource("6_l03as")]
+position = Vector2(250, 463)
