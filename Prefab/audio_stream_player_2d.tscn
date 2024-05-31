@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ibs5waeshy4o"]
+
+[ext_resource type="Script" path="res://Scripts/AudioStreamPlayer2D.gd" id="1_lntn2"]
+[ext_resource type="AudioStream" uid="uid://dq28e23vnpguf" path="res://SoundMusic/Burn Me Down.mp3" id="1_uylym"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+position = Vector2(-599, 0)
+autoplay = true
+script = ExtResource("1_lntn2")
+listMusic = Array[AudioStream]([ExtResource("1_uylym")])

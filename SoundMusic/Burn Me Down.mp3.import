@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq28e23vnpguf"
+path="res://.godot/imported/Burn Me Down.mp3-fe501fbf33b5bc4475079da724b84636.mp3str"
+
+[deps]
+
+source_file="res://SoundMusic/Burn Me Down.mp3"
+dest_files=["res://.godot/imported/Burn Me Down.mp3-fe501fbf33b5bc4475079da724b84636.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

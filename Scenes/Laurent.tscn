@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6htw6pyvqn1h"]
+[gd_scene load_steps=6 format=3 uid="uid://c6htw6pyvqn1h"]
 
 [ext_resource type="TileSet" uid="uid://cfo262ve2ew26" path="res://Assets/TIleSet.tres" id="1_1ut5k"]
 [ext_resource type="PackedScene" uid="uid://cis61efeqcxvf" path="res://Prefab/mushroom_ennemy.tscn" id="2_14ul7"]
 [ext_resource type="PackedScene" uid="uid://b53iwxynj1ide" path="res://Scenes/mainCharacter.tscn" id="3_u5flv"]
 [ext_resource type="PackedScene" uid="uid://cgoquplnqdltm" path="res://fade_rectangle.tscn" id="4_11eyc"]
+[ext_resource type="PackedScene" uid="uid://ibs5waeshy4o" path="res://Prefab/audio_stream_player_2d.tscn" id="5_4y52m"]
 
 [node name="Laurent" type="Node2D"]
 
@@ -28,3 +29,5 @@ offset_left = -578.0
 offset_top = -322.0
 offset_right = 577.0
 offset_bottom = 329.0
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("5_4y52m")]
