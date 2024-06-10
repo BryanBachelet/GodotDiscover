@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const MIN_SPEED = 300.0
 var currentSpeed = MIN_SPEED
 const MAX_SPEED = 600.0
@@ -9,7 +8,7 @@ const JUMP_VELOCITY = -500
 @onready var color_rec = $Camera2D/FadeRectangle
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var gun : Gun 
 
 func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1) :
@@ -38,10 +37,16 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	if (gun) :
+		gun.SetReversePos(isLeft)
 	pass
 	
 func Die() : 
 	print("DIE!!!!!!!!!")
+	
+func SetGun(newGun:Gun) : 
+	gun = newGun
+	
+

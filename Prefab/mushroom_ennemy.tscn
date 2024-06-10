@@ -279,6 +279,7 @@ animations = [{
 
 [node name="MushroomEnnemy" type="CharacterBody2D" groups=["Enemy"]]
 scale = Vector2(3, 3)
+collision_layer = 3
 script = ExtResource("1_j20jp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

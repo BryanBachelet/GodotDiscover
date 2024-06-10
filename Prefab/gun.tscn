@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://bt82hny1tr6hr"]
+[gd_scene load_steps=16 format=3 uid="uid://bt82hny1tr6hr"]
 
 [ext_resource type="Script" path="res://Scripts/Gun.gd" id="1_3sn6v"]
 [ext_resource type="Texture2D" uid="uid://bi14sv6u1xl11" path="res://Assets/Pistol_V1.00 - SHOOTING (ALL FX).png" id="2_bacft"]
-[ext_resource type="PackedScene" uid="uid://cberal7okjo8y" path="res://Prefab/Projectile.tscn" id="2_q3mlx"]
 [ext_resource type="Texture2D" uid="uid://bmiyjxg6y6834" path="res://Assets/GUN_01_[square_frame]_01_V1.00.png" id="3_b2hw0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jtkey"]
@@ -101,7 +100,6 @@ animations = [{
 [node name="Gun" type="Node2D" groups=["Gun"]]
 position = Vector2(24, 6)
 script = ExtResource("1_3sn6v")
-proj = ExtResource("2_q3mlx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8iy3n")

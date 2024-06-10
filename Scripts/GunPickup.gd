@@ -14,6 +14,9 @@ func _on_area_2d_body_entered(body):
 	if (body.is_in_group("Player")) :
 		var instance : Gun = gunInst.instantiate() as Gun
 		print("Gun acquired !")
-		body.velocity = Vector2(0, body.velocity.y)
-		body.add_child(instance)
-	pass # Replace with function body.
+		var player : CharacterBody2D = body as CharacterBody2D
+		if player :
+			body.velocity = Vector2(0, body.velocity.y)
+			body.add_child(instance)
+			player.SetGun(instance)
+		queue_free()
